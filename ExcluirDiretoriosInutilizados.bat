@@ -1,8 +1,11 @@
 @echo off
 
-FOR /D %%c in (*) DO (
-    FOR /D %%d in (500.*) DO (
-	cd %cd%\%%c\Versao\%%d\dashboard
+FOR /D %%b in (*) DO (
+    cd %cd%\%%b\versao
+
+    FOR /D %%c in (*00.*) DO (
+	rd /s /q %cd%\%%b\versao\%%c\dashboard
+        rd /s /q %cd%\%%b\versao\%%c\ReportBuilder
     )
 )
 
