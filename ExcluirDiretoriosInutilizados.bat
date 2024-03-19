@@ -16,6 +16,9 @@ FOR /D %%a in (Q:\*,
      echo Excluindo diretorio %%a\Dados\BinarioOcorrenciaReceita
      rd /s /q %%a\Dados\BinarioOcorrenciaReceita
 
+     echo Excluindo diretorio %%a\Dados\BinarioIntegracao
+     rd /s /q %%a\Dados\BinarioIntegracao
+
      FOR /D %%c in (%%a\Versao\*,
                     %%a\VersaoPlano\*,
                     %%a\Qualidade\* ) DO (
